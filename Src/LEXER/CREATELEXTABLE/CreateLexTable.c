@@ -1,4 +1,4 @@
-#include "../../../Include/minishell.h"
+#include "../../../include/minishell.h"
 
 /*
 	Count degiskenine komutun ne kadar genislikte olmasi gerektigi get_cmdlen 

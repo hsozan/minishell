@@ -1,4 +1,4 @@
-#include "../../../Include/minishell.h"
+#include "../../../include/minishell.h"
 
 void	expand_cmd(char **dst)
 {

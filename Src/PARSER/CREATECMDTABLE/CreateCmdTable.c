@@ -1,4 +1,4 @@
-#include "../../../Include/minishell.h"
+#include "../../../include/minishell.h"
 
 void	create_cmdtable(t_lexlist *lex_table)
 {

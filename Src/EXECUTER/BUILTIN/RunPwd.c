@@ -1,4 +1,4 @@
-#include "../../../Include/minishell.h"
+#include "../../../include/minishell.h"
 
 void	run_pwd(t_cmdlist *cmd_node)
 {

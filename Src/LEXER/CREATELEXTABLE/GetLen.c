@@ -1,4 +1,4 @@
-#include "../../../Include/minishell.h"
+#include "../../../include/minishell.h"
 
 /*
 	c karakterine komutun ilk indisi atanir ve hangi tirnak

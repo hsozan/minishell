@@ -1,4 +1,4 @@
-#include "../../../Include/minishell.h"
+#include "../../../include/minishell.h"
 
 void	exec_command(t_cmdlist *cmd_node, int *fd, int fd_index)
 {

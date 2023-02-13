@@ -1,4 +1,4 @@
-#include "../../../Include/minishell.h"
+#include "../../../include/minishell.h"
 
 void	run_process(t_cmdlist *cmd_list, int *fd, int fd_index)
 {

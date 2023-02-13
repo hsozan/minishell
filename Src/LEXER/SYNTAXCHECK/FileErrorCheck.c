@@ -1,4 +1,4 @@
-#include "../../../Include/minishell.h"
+#include "../../../include/minishell.h"
 
 int	file_error_check(t_lexlist *lex_list)
 {

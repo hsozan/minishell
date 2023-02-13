@@ -1,4 +1,4 @@
-#include "../../Include/minishell.h"
+#include "../../include/minishell.h"
 
 void	init_core(char **env)
 {

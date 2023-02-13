@@ -1,4 +1,4 @@
-#include "../../../Include/minishell.h"
+#include "../../../include/minishell.h"
 /*
 	olusturulmus lexer bagli listesinde ki her nodeda bulunan 
 	sozcuklerin tipi belirlenir.

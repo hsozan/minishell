@@ -1,4 +1,4 @@
-#include "../../../Include/minishell.h"
+#include "../../../include/minishell.h"
 
 /*
 	gonderilen bagli liste adresinin icini kontrol eder eger ici bos ise 

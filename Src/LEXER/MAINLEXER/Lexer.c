@@ -1,4 +1,4 @@
-#include "../../../Include/minishell.h"
+#include "../../../include/minishell.h"
 
 /*
 	Lexer 4 asamali prjenin ilk asamasidir. Burada amac

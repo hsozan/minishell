@@ -1,4 +1,4 @@
-#include "../../../Include/minishell.h"
+#include "../../../include/minishell.h"
 
 int	create_new_filelist(t_cmdlist *node, t_lexlist **lex_list)
 {
