@@ -1,6 +1,6 @@
 NAME = minishell
 
-CFLAGS	:= -Wall -Werror -Wextra -ggdb -I $(INCLUDE) /goinfre/homebrew/opt/readline/include
+CFLAGS	:= -Wall -Werror -Wextra -I $(INCLUDE) /goinfre/homebrew/opt/readline/include
 READLINE = -lreadline -L /goinfre/homebrew/opt/readline/lib
 INCLUDE = -I ./include
 SRC = $(shell find src -name "*.c")
@@ -14,7 +14,8 @@ $(NAME):
 	@make clean
 
 clean:
-	@rm -rf $(NAME).dSYM
+	@echo "Cleaning Objects..."
+	@echo "Done"
 
 fclean: clean
 	@echo "Cleaning Program..."
