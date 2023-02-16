@@ -12,7 +12,7 @@ void	run_execve(t_cmdlist *cmd_node, int *fd, int fd_index)
 		if (execve(cmd_node->cmd, cmd_node->path, envlist) == -1)
 		{
 			if (cmd_node->cmd)
-				print_error(cmd_node->cmd, " command not found\n", NULL);
+				print_error("zsh: command not found: ", cmd_node->cmd, "\n");
 			free_env_cpy(envlist);
 			free_for_loop();
 			free_core();

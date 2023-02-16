@@ -7,5 +7,4 @@ void	init_core(char **env)
 	set_title();
 	g_core.exec_output = 0;
 	g_core.old_exec_output = 0;
-	g_core.main_pid = getpid();
 }

@@ -10,7 +10,7 @@ all: $(NAME)
 
 $(NAME):
 	@echo "Compiling..."
-	@gcc $(CFLAGS) $(SRC) $(READLINE) $(INCLUDE) -o $(NAME)
+	@gcc -g $(CFLAGS) $(SRC) $(READLINE) $(INCLUDE) -o $(NAME)
 	@make clean
 
 clean:

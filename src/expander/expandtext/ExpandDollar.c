@@ -25,7 +25,7 @@ void	double_dollar(char **dst, char **src)
 {
 	char	*line;
 
-	line = ft_itoa(g_core.main_pid);
+	line = ft_itoa(g_core.old_exec_output);
 	own_strjoin(dst, line);
 	free(line);
 	(*src)++;

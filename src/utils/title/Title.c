@@ -3,12 +3,14 @@
 void	change_title(void)
 {
 	char	cwd[256];
+	char	*tmp;
 
+	tmp = getcwd(cwd, 256);
 	if (g_core.title.full_title)
 		free(g_core.title.full_title);
 	g_core.title.full_title = NULL;
 	own_strjoin(&g_core.title.full_title, g_core.title.head);
-	own_strjoin(&g_core.title.full_title, (char *)getcwd(cwd, 256));
+	own_strjoin(&g_core.title.full_title, strrchr(tmp, '/'));
 	own_strjoin(&g_core.title.full_title, "$ ");
 }
 
