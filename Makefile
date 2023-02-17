@@ -1,6 +1,6 @@
 NAME = minishell
 
-CFLAGS	:= -Wall -Werror -Wextra -I $(INCLUDE) /goinfre/homebrew/opt/readline/include
+#CFLAGS	:= -Wall -Werror -Wextra -I $(INCLUDE) /goinfre/homebrew/opt/readline/include
 LCFLAGS	:= -Wall -Werror -Wextra -I $(INCLUDE) /usr/include/readline
 #READLINE = -lreadline -L /goinfre/homebrew/opt/readline/lib
 LREADLINE = -L/usr/include -lreadline 
