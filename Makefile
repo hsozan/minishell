@@ -1,7 +1,9 @@
 NAME = minishell
 
 CFLAGS	:= -Wall -Werror -Wextra -I $(INCLUDE) /goinfre/homebrew/opt/readline/include
-READLINE = -lreadline -L /goinfre/homebrew/opt/readline/lib
+LCFLAGS	:= -Wall -Werror -Wextra -I $(INCLUDE) /usr/include/readline
+#READLINE = -lreadline -L /goinfre/homebrew/opt/readline/lib
+LREADLINE = -L/usr/include -lreadline 
 INCLUDE = -I ./include
 SRC = $(shell find src -name "*.c")
 
@@ -10,7 +12,7 @@ all: $(NAME)
 
 $(NAME):
 	@echo "Compiling..."
-	@gcc -g $(CFLAGS) $(SRC) $(READLINE) $(INCLUDE) -o $(NAME)
+	@gcc -g $(LCFLAGS) $(SRC) $(LREADLINE) $(INCLUDE) -o $(NAME)
 	@make clean
 
 clean:

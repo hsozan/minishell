@@ -1,5 +1,5 @@
 #include "../../include/minishell.h"
-
+t_core g_core;
 int	main(int argc, char **argv, char **env)
 {
 	(void)argc;
