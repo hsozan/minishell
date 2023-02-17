@@ -8,7 +8,7 @@ INCLUDE = -I ./include
 SRC = $(shell find src -name "*.c")
 
 all: $(NAME)
-	@echo "Done"
+	@echo "$(NAME) is Ready"
 
 $(NAME):
 	@echo "Compiling..."
