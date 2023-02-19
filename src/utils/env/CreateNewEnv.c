@@ -42,3 +42,17 @@ t_env	*add_newenv(t_env **env_table, char *env)
 	last_node->next = NULL;
 	return (last_node);
 }
+
+char *get_env(char *env_name)
+{
+	t_env	*temp_env;
+
+	temp_env = g_core.env_table;
+	while (temp_env)
+	{
+		if (str_compare(env_name, temp_env->env_name))
+			return (temp_env->content);
+		temp_env = temp_env->next;
+	}
+	return (NULL);
+}

@@ -5,7 +5,13 @@ void	run_cd(t_cmdlist *cmd_node)
 	int		array_len;
 
 	array_len = get_array_len(cmd_node->path);
-	if (array_len > 2)
+	if (cmd_node->path[1] && str_compare(cmd_node->path[1], \
+		"-") && array_len == 2)
+	{
+		change_dir(get_env("OLDPWD"));
+		return ;
+	}
+	else if (array_len > 2)
 	{
 		g_core.exec_output = 1;
 		print_error("-bash: cd: too many arguments\n", NULL, NULL);

@@ -1,28 +1,31 @@
 NAME = minishell
 
-#CFLAGS	:= -Wall -Werror -Wextra -I $(INCLUDE) /goinfre/homebrew/opt/readline/include
-LCFLAGS	:= -Wall -Werror -Wextra -I $(INCLUDE) /usr/include/readline
-#READLINE = -lreadline -L /goinfre/homebrew/opt/readline/lib
-LREADLINE = -L/usr/include -lreadline 
+CFLAGS	:= -Wall -Werror -Wextra -I $(INCLUDE) /goinfre/homebrew/opt/readline/include
+#LCFLAGS	:= -Wall -Werror -Wextra -I $(INCLUDE) /usr/include/readline
+READLINE = -lreadline -L /goinfre/homebrew/opt/readline/lib
+#LREADLINE = -L/usr/include -lreadline 
 INCLUDE = -I ./include
 SRC = $(shell find src -name "*.c")
+GREEN = \033[0;32m
+BLUE = \033[0;34m
+DEFAULT = \033[0m
 
 all: $(NAME)
-	@echo "$(NAME) is Ready"
+	@echo "$(BLUE)./$(NAME)$(GREEN) is Ready to Use.$(DEFAULT)"
 
 $(NAME):
-	@echo "Compiling..."
-	@gcc -g $(LCFLAGS) $(SRC) $(LREADLINE) $(INCLUDE) -o $(NAME)
-	@make clean
+	@echo "$(GREEN)Compiling...$(DEFAULT)"
+	@gcc $(CFLAGS) $(SRC) $(READLINE) $(INCLUDE) -o $(NAME)
+	@echo "$(GREEN)Done$(DEFAULT)"
 
 clean:
-	@echo "Cleaning Objects..."
-	@echo "Done"
+	@echo "$(GREEN)Cleaning$(BLUE) Objects..."
+	@echo "Done$(DEFAULT)"
 
 fclean: clean
-	@echo "Cleaning Program..."
+	@echo "$(GREEN)Cleaning$(BLUE) Executable..."
 	@rm -rf $(NAME)
-	@echo "Done"
+	@echo "Done$(DEFAULT)"
 
 re: fclean all
 

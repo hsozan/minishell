@@ -24,3 +24,16 @@ int	ft_atoi(const char *str)
 	}
 	return (tmp * a);
 }
+
+int ft_putstr_fd_len(char *s, int fd, int len)
+{
+	int i;
+
+	i = 0;
+	while (s[i] && i < len)
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
+	return (i);
+}

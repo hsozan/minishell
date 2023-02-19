@@ -31,7 +31,6 @@ typedef struct s_filelist
 
 typedef struct s_cmdlist
 {
-	char				**old_path;
 	int					infile;
 	int					outfile;
 	int					pid;

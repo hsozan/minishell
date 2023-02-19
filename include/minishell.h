@@ -16,8 +16,8 @@
 # include "expander.h"
 # include "parser.h"
 # include "executer.h"
-//# include "/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/readline/history.h"
-#include "/usr/include/readline/history.h"
+# include "/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/readline/history.h"
+//#include "/usr/include/readline/history.h"
 
 extern t_core	g_core;
 
