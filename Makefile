@@ -9,9 +9,10 @@ SRC = $(shell find src -name "*.c")
 GREEN = \033[0;32m
 BLUE = \033[0;34m
 DEFAULT = \033[0m
+TEAL = \033[0;36m
 
 all: $(NAME)
-	@echo "$(BLUE)./$(NAME)$(GREEN) is Ready to Use.$(DEFAULT)"
+	@echo "$(TEAL)./$(NAME)$(GREEN) is Ready to Use.$(DEFAULT)"
 
 $(NAME):
 	@echo "$(GREEN)Compiling...$(DEFAULT)"
@@ -19,11 +20,11 @@ $(NAME):
 	@echo "$(GREEN)Done$(DEFAULT)"
 
 clean:
-	@echo "$(GREEN)Cleaning$(BLUE) Objects..."
+	@echo "$(GREEN)Cleaning$(TEAL) Objects..."
 	@echo "Done$(DEFAULT)"
 
 fclean: clean
-	@echo "$(GREEN)Cleaning$(BLUE) Executable..."
+	@echo "$(GREEN)Cleaning$(TEAL) Executable..."
 	@rm -rf $(NAME)
 	@echo "Done$(DEFAULT)"
 

@@ -6,7 +6,7 @@
 /*   By: stunca <stunca@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 14:45:03 by stunca            #+#    #+#             */
-/*   Updated: 2023/02/19 14:45:03 by stunca           ###   ########.fr       */
+/*   Updated: 2023/02/19 14:45:03 by hsozan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	clear_void_contents(void);
 void	expand_cmd(char **dst);
 void	expand_from_env_value(char **dst, char *content);
 char	*get_arg_from_env_value(char **envs, char *search_arg_name);
-char    *get_env(char *env_name);
+char	*get_env(char *env_name);
 
 void	print_expander(void);
 

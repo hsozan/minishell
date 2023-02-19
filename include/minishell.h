@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stunca <stunca@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hsozan <hsozan@42kocaeli.tr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 14:45:16 by stunca            #+#    #+#             */
-/*   Updated: 2023/02/19 14:45:19 by stunca           ###   ########.fr       */
+/*   Updated: 2023/02/19 16:32:33 by hsozan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@
 # include "expander.h"
 # include "parser.h"
 # include "executer.h"
-# include "/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/readline/history.h"
 //#include "/usr/include/readline/history.h"
 
 extern t_core	g_core;
