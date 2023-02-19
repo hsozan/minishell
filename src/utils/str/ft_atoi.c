@@ -6,7 +6,7 @@
 /*   By: hsozan <hsozan@42kocaeli.tr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 13:44:11 by hsozan            #+#    #+#             */
-/*   Updated: 2023/02/19 13:44:12 by hsozan           ###   ########.fr       */
+/*   Updated: 2023/02/19 14:35:33 by hsozan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ int	ft_atoi(const char *str)
 	return (tmp * a);
 }
 
-int ft_putstr_fd_len(char *s, int fd, int len)
+int	ft_putstr_fd_len(char *s, int fd, int len)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i] && i < len)

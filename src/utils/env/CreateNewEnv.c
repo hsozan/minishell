@@ -55,7 +55,7 @@ t_env	*add_newenv(t_env **env_table, char *env)
 	return (last_node);
 }
 
-char *get_env(char *env_name)
+char	*get_env(char *env_name)
 {
 	t_env	*temp_env;
 

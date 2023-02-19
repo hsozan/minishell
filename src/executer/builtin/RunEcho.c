@@ -30,9 +30,8 @@ void	run_echo(t_cmdlist *cmd_node)
 	{
 		if (path[i] && str_compare(path[i], "-n") != 1)
 			write(cmd_node->outfile, path[i], ft_strlen(path[i]));
-		if (path[i++])
-			if (path[i] && str_compare(path[i-1], "-n") != 1)
-				write(cmd_node->outfile, " ", 1);
+		if (path[i++] && path[i] && str_compare(path[i - 1], "-n") != 1)
+			write(cmd_node->outfile, " ", 1);
 	}
 	if (!is_n)
 		write(cmd_node->outfile, "\n", 1);
