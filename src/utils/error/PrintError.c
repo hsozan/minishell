@@ -23,7 +23,7 @@ int	print_lex_error(t_lexlist *lex_list)
 
 void	print_error(char *ptr1, char *ptr2, char *ptr3)
 {
-	write(2 ,"\033[0;31m" , 7);
+	write(2, "\033[0;31m", 7);
 	if (ptr1)
 		write(2, ptr1, ft_strlen(ptr1));
 	if (ptr2)
