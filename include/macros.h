@@ -45,6 +45,9 @@
 # define EXIT 7
 # define SIGNAL_C 32
 # define HERADOC -2
-# define TITLE "i̇𝕟i̇$є𝓁\033[0;36m║▌║▌║█│▌\033[0;36m:\033[0m"
+# define GREEN = "\033[0;32m"
+# define BLUE = "\033[0;34m"
+# define DEFAULT = "\033[0m"
+# define TEAL = "\033[0;36m"
 
 #endif

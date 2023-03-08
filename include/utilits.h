@@ -49,6 +49,8 @@ size_t	ft_strlen(char *ptr);
 
 void	own_strjoin(char **dst, char *src);
 
+void	own_strjoin1(char **dst, char *src);
+
 void	str_addchar(char **dst, char c);
 
 int		get_array_len(char **array);
@@ -56,6 +58,10 @@ int		get_array_len(char **array);
 int		str_compare(char *str1, char *str2);
 
 size_t	trim_spaces(char **cmd_line);
+
+char    *ft_strtonl(char *str);
+
+int     ft_printf(const char *s, ...);
 
 int		ft_putstr_fd_len(char *s, int fd, int len);
 
