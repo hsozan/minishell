@@ -60,6 +60,7 @@ typedef struct s_core
 	int			old_exec_output;
 	int			heradoc_fd;
 	int			is_read_arg;
+	char		*usrname;
 	char		*cmd;
 	char		**metachars;
 	t_env		*env_table;
