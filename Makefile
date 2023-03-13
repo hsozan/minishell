@@ -14,11 +14,15 @@ TEAL = \033[0;36m
 all: $(NAME)
 	@echo "$(TEAL)./$(NAME)$(GREEN) is Ready to Use.$(DEFAULT)"
 
-$(NAME):
+$(NAME): norm
 	@echo "$(GREEN)Compiling...$(DEFAULT)"
 	@gcc $(CFLAGS) $(SRC) $(READLINE) $(INCLUDE) -o $(NAME)
-	@echo "$(GREEN)Done$(DEFAULT)"
+	@echo "$(GREEN)Compiled.$(DEFAULT)"
 
+norm :
+	@echo "$(GREEN)Norminette...$(DEFAULT)"
+	@norminette src include
+	@echo "Norminette is $(TEAL)[$(GREEN)OK$(TEAL)].$(DEFAULT)"
 clean:
 	@echo "$(GREEN)Cleaning$(TEAL) Objects..."
 	@echo "Done$(DEFAULT)"

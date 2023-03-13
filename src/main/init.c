@@ -12,16 +12,16 @@
 
 #include "../../include/minishell.h"
 
-void get_usrname()
+void	get_usrname(void)
 {
 	t_env	*temp_env;
 
 	temp_env = g_core.env_table;
-	while(temp_env)
+	while (temp_env)
 	{
 		if (str_compare("USER", temp_env->env_name))
-			g_core.usrname=temp_env->content;
-		temp_env=temp_env->next;
+			g_core.usrname = temp_env->content;
+		temp_env = temp_env->next;
 	}
 }
 

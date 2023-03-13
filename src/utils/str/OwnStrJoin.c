@@ -40,6 +40,7 @@ void	own_strjoin(char **dst, char *src)
 		free(*dst);
 	*dst = ptr;
 }
+
 void	own_strjoin1(char **dst, char *src)
 {
 	char	*ptr;

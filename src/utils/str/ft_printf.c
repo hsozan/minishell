@@ -6,7 +6,7 @@
 /*   By: hsozan <hsozan@42kocaeli.tr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 12:14:21 by hsozan            #+#    #+#             */
-/*   Updated: 2023/03/08 12:14:41 by hsozan           ###   ########.fr       */
+/*   Updated: 2023/03/13 12:01:56 by hsozan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <unistd.h>
 
 //ft_printf with s d x X % c p u
-int ft_putchar(char c)
+int	ft_putchar(char c)
 {
 	return (write(1, &c, 1));
 }

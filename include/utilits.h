@@ -59,9 +59,9 @@ int		str_compare(char *str1, char *str2);
 
 size_t	trim_spaces(char **cmd_line);
 
-char    *ft_strtonl(char *str);
+char	*ft_strtonl(char *str);
 
-int     ft_printf(const char *s, ...);
+int		ft_printf(const char *s, ...);
 
 int		ft_putstr_fd_len(char *s, int fd, int len);
 
