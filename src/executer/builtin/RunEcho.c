@@ -33,6 +33,7 @@ void	run_echo(t_cmdlist *cmd_node)
 		if (path[i++] && path[i] && str_compare(path[i - 1], "-n") != 1)
 			write(cmd_node->outfile, " ", 1);
 	}
-	if (!is_n)
-		write(cmd_node->outfile, "\n", 1);
+	if (is_n)
+		write(cmd_node->outfile, "\033[0;32m%\033[0m", 10);
+	write(cmd_node->outfile, "\n", 1);
 }
