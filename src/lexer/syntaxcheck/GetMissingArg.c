@@ -33,7 +33,9 @@ int	read_missing_arg(int *fd)
 	int		pid;
 	int		return_value;
 
+	pid = -1;
 	pid = fork();
+	g_core.pid = pid;
 	g_core.is_read_arg = 1;
 	if (!pid)
 		read_missing_arg_value(fd);

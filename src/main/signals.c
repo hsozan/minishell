@@ -14,8 +14,6 @@
 
 void	sig_handler(int signum)
 {
-	ft_printf("\033[0;36m└──\033[0;32m╼\033[0;36m$\n");
-	ft_printf("%s", ft_strtonl(g_core.title.full_title));
 	change_title();
 	(void)signum;
 	if (signal_in_reading())
@@ -32,14 +30,13 @@ void	sig_handler(int signum)
 
 int	signal_in_reading(void)
 {
-	if (g_core.is_read_arg)
+	if (g_core.is_read_arg && g_core.pid == 0)
 	{
-		write(1, "\n", 1);
 		free_for_loop();
 		free_core();
 		exit(SIGNAL_C);
 	}
-	else if (g_core.is_read_arg)
+	else if (g_core.is_read_arg && g_core.pid != 0)
 	{
 		g_core.exec_output = SIGNAL_C;
 		return (1);
