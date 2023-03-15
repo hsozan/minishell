@@ -1,8 +1,1 @@
->> "|"
-Tırnak içine alınanlar daha expander'a ulaşamadan lexer'da hata diyerek program sonlanıyor. Üstteki kodda | adında bir dosya oluşturması gerekirken "|" 'ı | gibi gördüğünden hata veriyor. " " , ' ' olaylarına tekrar bakmamız lazım
-
-
-
-| "|" yine tırnaktan dolayı verilen hata yanlış
-
-
+tek sayıda ", ' olduğunda kontrol lazim
