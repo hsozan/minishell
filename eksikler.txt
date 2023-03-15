@@ -1,1 +1,6 @@
-tek sayıda ", ' olduğunda kontrol lazim
+",' tırnak belki bakılacak
+
+echo $$ bakılacak pid mi değil mi
+
+
+  
