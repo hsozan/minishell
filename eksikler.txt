@@ -4,5 +4,5 @@ echo $$ bakılacak pid mi değil mi
 
 !? exit yazıldığında exit'ın yeri-child ve ana minishellde
 
-
+cd yapınca title patlıyor onu düzelt
   
