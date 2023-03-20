@@ -12,12 +12,12 @@ DEFAULT = \033[0m
 TEAL = \033[0;36m
 
 all: $(NAME)
-	@echo "$(TEAL)./$(NAME)$(GREEN) is Ready to Use.$(DEFAULT)"
 
 $(NAME): norm
 	@echo "$(GREEN)Compiling...$(DEFAULT)"
 	@gcc $(CFLAGS) $(SRC) $(READLINE) $(INCLUDE) -o $(NAME)
 	@echo "$(GREEN)Compiled.$(DEFAULT)"
+	@echo "$(TEAL)./$(NAME)$(GREEN) is Ready to Use.$(DEFAULT)"
 
 norm :
 	@echo "$(GREEN)Norminette...$(DEFAULT)"

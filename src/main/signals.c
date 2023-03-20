@@ -14,7 +14,7 @@
 
 void	sig_handler(int signum)
 {
-	change_title();
+	ft_printf("\n%s", ft_strtonl(g_core.title.head));
 	(void)signum;
 	if (signal_in_reading())
 		return ;
