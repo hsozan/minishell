@@ -2,6 +2,7 @@
 
 echo $$ bakılacak pid mi değil mi
 $$ BOZUK MU KONTROL GETPID??
+$$ ile $? farklı değerler veriyor ne oldukları kontrol edilmeli!
 
 !? exit yazıldığında exit'ın yeri-child ve ana minishellde
 
@@ -26,4 +27,7 @@ lexer'da * ile alınan cmd_line ",' durumunda cmd_line attırılırken en sonra 
 << a.txt yazıldığında birkaç şey yazıktan sonra ctrl+c atıldığında program kafayı yiyor XDDD
 
 free_without_heradoc'a birlikte bak. anlamadım?!
+
+
+yaptığım echo "~" olayını hakan abiye göster
  
