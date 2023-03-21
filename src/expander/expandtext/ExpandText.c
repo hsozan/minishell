@@ -32,8 +32,11 @@ void	expand_order(char **dst, char **src)
 {
 	if (**src == *DOLLAR)
 		expand_dollar(dst, src);
-	if (**src == *TILDA && *(*src + 1) != *DOUBLE_QUOTE)
-		expand_envs(dst, "HOME");
 	else
-		own_strjoin(dst, "~");
+	{
+		if (**src == *TILDA && *(*src + 1) != *DOUBLE_QUOTE)
+			expand_envs(dst, "HOME");
+		else
+			own_strjoin(dst, "~");
+	}
 }
