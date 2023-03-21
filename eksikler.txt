@@ -21,3 +21,9 @@ bashde echo $' $" vb. girince > olayı oluyor onu bilecek şekilde '," kontrolü
 
 
 lexer'da * ile alınan cmd_line ",' durumunda cmd_line attırılırken en sonra parse_cmd işleminde baştan nasıl başlıyor. pointerlar aynı adresi göstermiyor mu?
+
+
+<< a.txt yazıldığında birkaç şey yazıktan sonra ctrl+c atıldığında program kafayı yiyor XDDD
+
+free_without_heradoc'a birlikte bak. anlamadım?!
+ 
