@@ -3,31 +3,27 @@
 echo $$ bakılacak pid mi değil mi
 $$ BOZUK MU KONTROL GETPID??
 $$ ile $? farklı değerler veriyor ne oldukları kontrol edilmeli!
-
-!? exit yazıldığında exit'ın yeri-child ve ana minishellde
-
   
 void	expand_values_from_lexlist(void)'de  ELSE IF KISMINI ANLAMADIM!
 HANGİ ÖRNEKLER ORAYA GİRİYOR
 
-expander'a tekrar bak!
-
 METACHAR KULLANIMI(anladıktan sonra expander sonuna tekrardan bak)
-
 
 echo $\0 ???!!!!
 bashde echo $' $" vb. girince > olayı oluyor onu bilecek şekilde '," kontrolü yap
 
 >'nın " çalışmasında sorun yok lakin ' da bashde normak iken ambiguous redirect hatası veriyor???. o da sanırım $ kontrolü yapan bir fonksiyon yüzünden oluyor. O bölüme geldiğinde hata olup olmadığı daha iyi anlaşılır.
 
-
 lexer'da * ile alınan cmd_line ",' durumunda cmd_line attırılırken en sonra parse_cmd işleminde baştan nasıl başlıyor. pointerlar aynı adresi göstermiyor mu?
 
-
 << a.txt yazıldığında birkaç şey yazıktan sonra ctrl+c atıldığında program kafayı yiyor XDDD
+sinyal almada bir sorun var sanirim
 
 free_without_heradoc'a birlikte bak. anlamadım?!
 
 
 yaptığım echo "~" olayını hakan abiye göster
+
+bazen çoklu ls | kullanımında hata yedim???????????
+
  
