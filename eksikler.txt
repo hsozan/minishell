@@ -1,4 +1,3 @@
-",' tırnak belki bakılacak
 
 echo $$ bakılacak pid mi değil mi
 $$ BOZUK MU KONTROL GETPID??
@@ -7,9 +6,6 @@ $$ ile $? farklı değerler veriyor ne oldukları kontrol edilmeli!
 void	expand_values_from_lexlist(void)'de  ELSE IF KISMINI ANLAMADIM!
 HANGİ ÖRNEKLER ORAYA GİRİYOR
 
-METACHAR KULLANIMI(anladıktan sonra expander sonuna tekrardan bak)
-
-echo $\0 ???!!!!
 bashde echo $' $" vb. girince > olayı oluyor onu bilecek şekilde '," kontrolü yap
 
 >'nın " çalışmasında sorun yok lakin ' da bashde normak iken ambiguous redirect hatası veriyor???. o da sanırım $ kontrolü yapan bir fonksiyon yüzünden oluyor. O bölüme geldiğinde hata olup olmadığı daha iyi anlaşılır.
@@ -21,9 +17,8 @@ sinyal almada bir sorun var sanirim
 
 free_without_heradoc'a birlikte bak. anlamadım?!
 
-
-yaptığım echo "~" olayını hakan abiye göster
-
 bazen çoklu ls | kullanımında hata yedim???????????
+
+YENİ SIKINTI SONDAKİ PIPE OLAYINDA CTRL+C sinyali gönderildiğinde title kafayı yiyor!!
 
  
