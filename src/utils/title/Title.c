@@ -24,19 +24,13 @@ void	change_title(void)
 	tmp = ft_strtonl(g_core.title.head);
 	tmp2 = getcwd(cwd, 256);
 	own_strjoin1(&tmp, "-\033[0;32m[\033[0m");
-	if (tmp)
-		free(tmp);
 	if (str_compare(g_core.usrname, strrchr(tmp2, '/') + 1))
 		own_strjoin1(&tmp, "~");
 	else
 		own_strjoin1(&tmp, strrchr(tmp2, '/') + 1);
-	if (tmp)
-		free(tmp);
 	own_strjoin1(&tmp, "\033[0;32m]\n\033[0;36m└──\033[0;32m╼\033[0;36m$");
 	own_strjoin(&g_core.title.full_title, tmp);
 	own_strjoin(&g_core.title.full_title, "\033[0m");
-	if (tmp)
-		free(tmp);
 }
 
 /*

@@ -43,7 +43,7 @@ void	own_strjoin(char **dst, char *src)
 
 void	own_strjoin1(char **dst, char *src)
 {
-	char	*ptr;
+	char	ptr[5009];
 	char	*holder_ptr;
 	char	*holder_dst;
 	size_t	len;
@@ -51,7 +51,6 @@ void	own_strjoin1(char **dst, char *src)
 	if (!*dst && !src)
 		return ;
 	len = ft_strlen(*dst) + ft_strlen(src);
-	ptr = (char *)malloc(sizeof(char) * (len + 1));
 	ptr[len] = 0;
 	holder_ptr = ptr;
 	holder_dst = *dst;
