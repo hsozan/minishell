@@ -1,4 +1,3 @@
-
 echo $$ bakılacak pid mi değil mi
 $$ BOZUK MU KONTROL GETPID??
 $$ ile $? farklı değerler veriyor ne oldukları kontrol edilmeli!
