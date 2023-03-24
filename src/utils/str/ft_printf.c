@@ -6,7 +6,7 @@
 /*   By: hsozan <hsozan@42kocaeli.tr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 12:14:21 by hsozan            #+#    #+#             */
-/*   Updated: 2023/03/13 12:01:56 by hsozan           ###   ########.fr       */
+/*   Updated: 2023/03/24 03:32:53 by hsozan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	ft_putnbr_base(unsigned long int n, char *base_c, int base)
 
 	res = 0;
 	i = 0;
-	if (n < 0 && base == 10)
+	if ((int)n < 0 && base == 10)
 	{
 		res += ft_putchar('-');
 		n *= -1;
