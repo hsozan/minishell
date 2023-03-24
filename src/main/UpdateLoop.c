@@ -18,7 +18,6 @@ void	update_loop(void)
 	g_core.exec_output = 0;
 	g_core.is_read_arg = 0;
 }
-//	update_exec_output();
 
 void	update_history(char *cmd)
 {
@@ -31,12 +30,4 @@ void	update_history(char *cmd)
 	if (!*ptr)
 		return ;
 	add_history(cmd);
-}
-
-void	update_exec_output(void)
-{
-	g_core.old_exec_output = g_core.old_exec_output ^ g_core.exec_output;
-	g_core.exec_output = g_core.old_exec_output ^ g_core.exec_output;
-	g_core.old_exec_output = g_core.old_exec_output ^ g_core.exec_output;
-	g_core.exec_output = 0;
 }
