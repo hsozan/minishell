@@ -56,7 +56,7 @@ void	create_cmdtable_nodes(int count)
 	g_core.cmd_table = (t_cmdlist *)malloc(sizeof(t_cmdlist));
 	fill_cmdtable_node(g_core.cmd_table);
 	temp_cmdtable = g_core.cmd_table;
-	while ((--count))
+	while (--count)
 	{
 		temp_cmdtable->next = (t_cmdlist *)malloc(sizeof(t_cmdlist));
 		fill_cmdtable_node(temp_cmdtable->next);

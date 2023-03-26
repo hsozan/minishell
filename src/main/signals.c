@@ -70,7 +70,7 @@ void	exit_signal_check(void)
 {
 	if (!g_core.cmd)
 	{
-		write(1, "Exit\n", 6);
+		write(1, "Exit", 6);
 		free_core();
 		exit(EXIT_SUCCESS);
 	}
