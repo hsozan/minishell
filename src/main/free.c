@@ -31,5 +31,5 @@ void	free_for_loop(void)
 		free_lexer();
 	if (g_core.cmd_table)
 		free_parser();
-	close_heradoc_file();
+	close_heredoc_file();
 }

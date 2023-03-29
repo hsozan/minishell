@@ -40,13 +40,35 @@ void	clear_pipe(int *fd)
 	}
 }
 
+/*void	switch_pipe(int **fd)
+{
+	(*fd)[0] = (*fd)[0] ^ (*fd)[2];
+	(*fd)[2] = (*fd)[0] ^ (*fd)[2];
+	(*fd)[0] = (*fd)[0] ^ (*fd)[2];
+	(*fd)[1] = (*fd)[1] ^ (*fd)[3];
+	(*fd)[3] = (*fd)[1] ^ (*fd)[3];
+	(*fd)[1] = (*fd)[1] ^ (*fd)[3];
+	(*fd)[5] = (*fd)[5] ^ (*fd)[3];
+	(*fd)[3] = (*fd)[5] ^ (*fd)[3];
+	(*fd)[5] = (*fd)[5] ^ (*fd)[3];
+	(*fd)[4] = (*fd)[2] ^ (*fd)[4];
+	(*fd)[2] = (*fd)[2] ^ (*fd)[4];
+	(*fd)[4] = (*fd)[2] ^ (*fd)[4];
+}*/
 void	switch_pipe(int **fd)
 {
+	int		temp;
+
+	temp = (*fd)[0];
 	(*fd)[0] = (*fd)[2];
-	(*fd)[2] = (*fd)[0];
+	(*fd)[2] = temp;
+	temp = (*fd)[1];
 	(*fd)[1] = (*fd)[3];
-	(*fd)[3] = (*fd)[1];
+	(*fd)[3] = temp;
+	temp = (*fd)[5];
 	(*fd)[5] = (*fd)[3];
+	(*fd)[3] = temp;
+	temp = (*fd)[4];
 	(*fd)[4] = (*fd)[2];
-	(*fd)[2] = (*fd)[4];
+	(*fd)[2] = temp;
 }

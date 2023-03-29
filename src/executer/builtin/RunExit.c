@@ -23,6 +23,19 @@ int	is_all_numeric(char *text)
 	return (1);
 }
 
+void	len1_handle(t_cmdlist *cmd_node)
+{
+	if (is_all_numeric(cmd_node->path[1]))
+		g_core.exec_output = ft_atoi(cmd_node->path[1]);
+	else
+	{
+		print_error("bash: exit: ",
+			cmd_node->path[1], ": numeric argument required\n");
+		g_core.exec_output = 255;
+		return ;
+	}
+}
+
 void	run_exit(t_cmdlist *cmd_node)
 {
 	int	array_len;
@@ -40,9 +53,7 @@ void	run_exit(t_cmdlist *cmd_node)
 			g_core.exec_output = ft_atoi(cmd_node->path[1]);
 		else
 		{
-			print_error("bash: exit: ",
-				cmd_node->path[1], ": numeric argument required\n");
-			g_core.exec_output = 255;
+			return (len1_handle(cmd_node));
 		}
 	}
 	else

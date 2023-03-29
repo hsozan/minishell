@@ -44,7 +44,7 @@
 # define ENV 6
 # define EXIT 7
 # define SIGNAL_C 32
-# define HERADOC -2
+# define HEREDOC -2
 # define GREEN = "\033[0;32m"
 # define BLUE = "\033[0;34m"
 # define DEFAULT = "\033[0m"

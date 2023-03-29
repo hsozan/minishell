@@ -12,7 +12,7 @@
 
 #include "../../../include/minishell.h"
 
-int	skip_heradoc(t_lexlist **lex, t_lexlist **temp, t_lexlist *stop, int *flag)
+int	skip_heredoc(t_lexlist **lex, t_lexlist **temp, t_lexlist *stop, int *flag)
 {
 	if (stop == *lex)
 		*flag |= 1;
@@ -27,7 +27,7 @@ int	skip_heradoc(t_lexlist **lex, t_lexlist **temp, t_lexlist *stop, int *flag)
 	return (0);
 }
 
-void	free_lexer_without_heradoc(t_lexlist *stop_list)
+void	free_lexer_without_heredoc(t_lexlist *stop_list)
 {
 	t_lexlist	*lexer;
 	t_lexlist	*temp_lexer;
@@ -37,7 +37,7 @@ void	free_lexer_without_heradoc(t_lexlist *stop_list)
 	flag = 0;
 	while (lexer)
 	{
-		if (skip_heradoc(&lexer, &temp_lexer, stop_list, &flag))
+		if (skip_heredoc(&lexer, &temp_lexer, stop_list, &flag))
 			continue ;
 		if (g_core.lex_table == lexer)
 		{

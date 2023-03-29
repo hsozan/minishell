@@ -46,7 +46,7 @@ typedef struct s_cmdlist
 	int					infile;
 	int					outfile;
 	int					pid;
-	char				*heradoc_values;
+	char				*heredoc_values;
 	char				*cmd;
 	char				**path;
 	t_filelist			*files;
@@ -58,7 +58,7 @@ typedef struct s_core
 	int			pid;
 	int			exec_output;
 	int			old_exec_output;
-	int			heradoc_fd;
+	int			heredoc_fd;
 	int			is_read_arg;
 	char		*usrname;
 	char		*cmd;

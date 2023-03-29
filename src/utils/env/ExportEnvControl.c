@@ -49,7 +49,6 @@ int	env_arg_control(char *env)
 {
 	if (env_name_control(env))
 		return (1);
-	print_error("-bash: export: `", env, "': not a valid identifier\n");
 	g_core.exec_output = 1;
 	return (0);
 }

@@ -12,7 +12,7 @@
 
 #include "../../../include/minishell.h"
 
-void	run_heradocs(t_cmdlist *node)
+void	run_heredocs(t_cmdlist *node)
 {
 	t_filelist	*temp_file;
 
@@ -23,9 +23,9 @@ void	run_heradocs(t_cmdlist *node)
 		{
 			if (temp_file->metachar[1] == DOUBLE_LESS[1])
 			{
-				if (!read_heradoc(node, temp_file->filename))
+				if (!read_heredoc(node, temp_file->filename))
 					return ;
-				temp_file->fd = HERADOC;
+				temp_file->fd = HEREDOC;
 			}
 			temp_file = temp_file->next;
 		}
@@ -33,7 +33,7 @@ void	run_heradocs(t_cmdlist *node)
 	}
 }
 
-int	read_heradoc(t_cmdlist *node, char *eof)
+int	read_heredoc(t_cmdlist *node, char *eof)
 {
 	int		pid;
 	int		fd[2];
@@ -44,7 +44,7 @@ int	read_heradoc(t_cmdlist *node, char *eof)
 	g_core.is_read_arg = 1;
 	g_core.pid = pid;
 	if (!pid)
-		fill_heradoc(eof, fd);
+		fill_heredoc(eof, fd);
 	close(fd[1]);
 	waitpid(pid, &return_value, 0);
 	return_value = WEXITSTATUS(return_value);
@@ -56,41 +56,41 @@ int	read_heradoc(t_cmdlist *node, char *eof)
 		return (0);
 	}
 	g_core.is_read_arg = 0;
-	set_heradoc_value(node, fd);
+	set_heredoc_value(node, fd);
 	return (1);
 }
 
-void	set_heradoc_value(t_cmdlist *node, int *fd)
+void	set_heredoc_value(t_cmdlist *node, int *fd)
 {
 	char	ptr[1];
 
-	if (node->heradoc_values)
+	if (node->heredoc_values)
 	{
-		free(node->heradoc_values);
-		node->heradoc_values = NULL;
+		free(node->heredoc_values);
+		node->heredoc_values = NULL;
 	}
 	while (read(fd[0], ptr, 1))
-		str_addchar(&node->heradoc_values, *ptr);
+		str_addchar(&node->heredoc_values, *ptr);
 	close(fd[0]);
 	str_addchar(&g_core.cmd, '\n');
-	own_strjoin(&g_core.cmd, node->heradoc_values);
+	own_strjoin(&g_core.cmd, node->heredoc_values);
 }
 
-void	fill_heradoc(char *eof, int *fd)
+void	fill_heredoc(char *eof, int *fd)
 {
-	char	*heradoc_lines;
+	char	*heredoc_lines;
 
 	close(fd[0]);
-	heradoc_lines = get_heradoc_values(eof);
-	write(fd[1], heradoc_lines, ft_strlen(heradoc_lines));
+	heredoc_lines = get_heredoc_values(eof);
+	write(fd[1], heredoc_lines, ft_strlen(heredoc_lines));
 	close(fd[1]);
-	free(heradoc_lines);
+	free(heredoc_lines);
 	free_for_loop();
 	free_core();
 	exit(EXIT_SUCCESS);
 }
 
-char	*get_heradoc_values(char *eof)
+char	*get_heredoc_values(char *eof)
 {
 	char	*line;
 	char	*newline;

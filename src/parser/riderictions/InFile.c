@@ -19,7 +19,7 @@ void	create_infile(t_cmdlist *node, t_filelist *file)
 
 	if (file->metachar[1] == DOUBLE_LESS[1])
 	{
-		node->infile = HERADOC;
+		node->infile = HEREDOC;
 		return ;
 	}
 	if (raise_file_error(file, &node->infile))
@@ -30,7 +30,7 @@ void	create_infile(t_cmdlist *node, t_filelist *file)
 	own_strjoin(&pwd, file->filename);
 	if (!access(pwd, F_OK))
 		file->fd = open(pwd, O_RDONLY, 0777);
-	if (file->fd <= SSTDERR && file->fd != HERADOC)
+	if (file->fd <= SSTDERR && file->fd != HEREDOC)
 	{
 		print_error("-bash: ", file->filename,
 			": No such file or directory\n");

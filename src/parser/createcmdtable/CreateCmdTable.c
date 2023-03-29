@@ -44,7 +44,7 @@ void	fill_cmdtable_node(t_cmdlist *node)
 	node->path = NULL;
 	node->next = NULL;
 	node->files = NULL;
-	node->heradoc_values = NULL;
+	node->heredoc_values = NULL;
 }
 
 void	create_cmdtable_nodes(int count)

@@ -36,14 +36,14 @@ t_filelist	*add_filelist(t_filelist **file_list, char *filename, char *meta);
 //CREATEFILES
 void		create_files(t_cmdlist *node);
 
-void		run_heradocs(t_cmdlist *node);
-int			read_heradoc(t_cmdlist *node, char *eof);
-void		set_heradoc_value(t_cmdlist *node, int *fd);
-void		fill_heradoc(char *eof, int *fd);
-char		*get_heradoc_values(char *eof);
+void		run_heredocs(t_cmdlist *node);
+int			read_heredoc(t_cmdlist *node, char *eof);
+void		set_heredoc_value(t_cmdlist *node, int *fd);
+void		fill_heredoc(char *eof, int *fd);
+char		*get_heredoc_values(char *eof);
 
-void		close_heradoc_file(void);
-void		open_heradoc_file(char	*create_mode);
+void		close_heredoc_file(void);
+void		open_heredoc_file(char	*create_mode);
 
 void		create_infile(t_cmdlist *node, t_filelist *file);
 

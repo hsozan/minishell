@@ -16,11 +16,11 @@ void	create_dup(t_cmdlist *cmd_list, int *fd, int fd_index)
 {
 	int	new_fd[2];
 
-	if (cmd_list->infile == HERADOC)
+	if (cmd_list->infile == HEREDOC)
 	{
 		pipe(new_fd);
-		write(new_fd[1], cmd_list->heradoc_values,
-			ft_strlen(cmd_list->heradoc_values));
+		write(new_fd[1], cmd_list->heredoc_values,
+			ft_strlen(cmd_list->heredoc_values));
 		dup2(new_fd[0], STDIN_FILENO);
 		close (new_fd[1]);
 		close(new_fd[0]);

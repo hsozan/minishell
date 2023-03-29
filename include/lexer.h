@@ -47,8 +47,8 @@ int			file_error_check(t_lexlist *lex_list);
 
 //FREELEXER
 void		free_lexer(void);
-void		free_lexer_without_heradoc(t_lexlist *stop_list);
-int			skip_heradoc(t_lexlist **lex, t_lexlist **temp,
+void		free_lexer_without_heredoc(t_lexlist *stop_list);
+int			skip_heredoc(t_lexlist **lex, t_lexlist **temp,
 				t_lexlist *stop, int *flag);
 
 void		print_lexer(void);

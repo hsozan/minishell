@@ -25,8 +25,8 @@ void	free_parser(void)
 		free_filelist(temp_parser->files);
 		if (temp_parser->path)
 			free(temp_parser->path);
-		if (temp_parser->heradoc_values)
-			free(temp_parser->heradoc_values);
+		if (temp_parser->heredoc_values)
+			free(temp_parser->heredoc_values);
 		free(temp_parser);
 	}
 	g_core.cmd_table = NULL;

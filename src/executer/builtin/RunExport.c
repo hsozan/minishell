@@ -58,7 +58,7 @@ void	double_export_arg(char *env_cmd)
 	char	*temp_envname;
 
 	if (!env_arg_control(env_cmd))
-		return ;
+		print_error("-bash: export: `", env_cmd, "': not a valid identifier\n");
 	temp_envname = get_env_name(env_cmd);
 	arg = env_cmd + ft_strlen(temp_envname);
 	is_equal = 0;

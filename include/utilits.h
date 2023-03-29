@@ -65,6 +65,8 @@ int		ft_printf(const char *s, ...);
 
 int		ft_putstr_fd_len(char *s, int fd, int len);
 
+char	*ft_strrchr(char *s, int c);
+
 //TITLE
 void	set_title(void);
 void	change_title(void);

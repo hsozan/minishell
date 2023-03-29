@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stunca <stunca@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hsozan <hsozan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 13:44:52 by hsozan            #+#    #+#             */
-/*   Updated: 2023/02/19 14:53:50 by stunca           ###   ########.fr       */
+/*   Updated: 2023/03/29 12:56:42 by hsozan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,5 @@ char	*ft_strrchr(char *s, int c)
 		s--;
 	if (c == *s)
 		return ((char *)s);
-	return (0);
+	return (NULL);
 }

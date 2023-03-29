@@ -17,7 +17,7 @@ int	print_lex_error(t_lexlist *lex_list)
 	print_error("-bash: syntax error near unexpected token '",
 		lex_list->content, "'\n");
 	g_core.exec_output = 2;
-	free_lexer_without_heradoc(lex_list);
+	free_lexer_without_heredoc(lex_list);
 	return (0);
 }
 
