@@ -37,7 +37,7 @@ void	create_cmdtable(t_lexlist *lex_table)
 
 void	fill_cmdtable_node(t_cmdlist *node)
 {
-	node->pid = -1;
+	node->pid = 1;
 	node->infile = SSTDIN;
 	node->outfile = SSTDOUT;
 	node->cmd = NULL;

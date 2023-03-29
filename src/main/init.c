@@ -27,7 +27,7 @@ void	get_usrname(void)
 
 void	init_core(char **env)
 {
-	g_core.pid = -1;
+	g_core.pid = 1;
 	fill_envs(env);
 	set_metachars();
 	get_usrname();
