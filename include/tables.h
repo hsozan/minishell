@@ -53,6 +53,14 @@ typedef struct s_cmdlist
 	struct s_cmdlist	*next;
 }	t_cmdlist;
 
+typedef struct s_need
+{
+	int		i;
+	int		j;
+	int		s;
+	int		flag;
+}	t_need;
+
 typedef struct s_core
 {
 	int			pid;
@@ -67,6 +75,7 @@ typedef struct s_core
 	t_lexlist	*lex_table;
 	t_cmdlist	*cmd_table;
 	t_title		title;
+	t_need		n;
 }	t_core;
 
 #endif

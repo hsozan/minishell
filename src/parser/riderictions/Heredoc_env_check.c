@@ -12,73 +12,81 @@
 
 #include "../../../include/minishell.h"
 
+void	set_n(char *new)
+{
+	(void)new;
+	g_core.n.i = 0;
+	g_core.n.j = 0;
+	g_core.n.s = 0;
+}
+
 char	*replace_line(char *old, char *replace, int begin, int start)
 {
 	char	*new;
-	int		i;
-	int		j;
-	int		s;
 
 	new = malloc(sizeof(char) * 100000);
-	i = 0;
-	j = 0;
-	s = 0;
-	while (old[i])
+	set_n(new);
+	while (old[g_core.n.i])
 	{
-		if (i == begin)
+		if (g_core.n.i == begin)
 		{
-			while (s < ft_strlen(replace))
+			while ((size_t)g_core.n.s < ft_strlen(replace))
 			{
-				new[j] = replace[s];
-				j++;
-				s++;
+				new[g_core.n.j] = replace[g_core.n.s];
+				g_core.n.j++;
+				g_core.n.s++;
 			}
-			i = i + start - 1;
+			g_core.n.i = g_core.n.i + start - 1;
 		}
 		else
 		{
-			new[j] = old[i];
-			j++;
+			new[g_core.n.j] = old[g_core.n.i];
+			g_core.n.j++;
 		}
-		i++;
+		g_core.n.i++;
 	}
-	new[j] = '\0';
+	new[g_core.n.j] = '\0';
 	return (new);
+}
+
+char	*env_loop(char *name, char *line)
+{
+	char	*temp;
+
+	while (line[g_core.n.i])
+	{
+		if (line[g_core.n.i] == '$' && line[g_core.n.i + 1] != '\0' \
+		&& line[g_core.n.i + 1] != ' ')
+		{
+			while (g_core.n.flag == 0 && (size_t)g_core.n.s < ft_strlen(line))
+			{
+				temp = ft_strpcpy(NULL, &line[g_core.n.i + 1], g_core.n.s);
+				if (get_env(temp) != NULL)
+				{
+					g_core.n.flag = 1;
+					name = get_env(temp);
+					g_core.n.j = g_core.n.i;
+				}
+				g_core.n.s++;
+			}
+		}
+	g_core.n.i++;
+	}
+	return (name);
 }
 
 char	*env_check(char *line)
 {
 	char	*name;
 	char	*newline;
-	int		i;
-	int		s;
-	int		flag;
-	int		j;
 
-	i = 0;
-	s = 0;
-	flag = 0;
+	g_core.n.flag = 0;
 	name = malloc(sizeof(char) * 100);
+	set_n(name);
 	newline = malloc(sizeof(char) * 100000);
-	while (line[i])
-	{
-		if (line[i] == '$' && line[i + 1] != '\0' && line[i + 1] != ' ')
-		{
-			while (flag == 0 && (size_t)s < ft_strlen(line))
-			{
-				if (get_env(ft_strpcpy(NULL, &line[i + 1], s)) != NULL)
-				{
-					flag = 1;
-					name = get_env(ft_strpcpy(NULL, &line[i + 1], s));
-					j = i;
-				}
-				s++;
-			}
-		}
-	i++;
-	}
-	if (flag == 1)
-		newline = replace_line(line, name, j,s);
+	name = env_loop(name, line);
+	if (g_core.n.flag == 1)
+		newline = replace_line(line, name, g_core.n.j, g_core.n.s);
 	else
 		newline = line;
 	return (newline);
