@@ -70,7 +70,8 @@ void	exit_signal_check(void)
 {
 	if (!g_core.cmd)
 	{
-		write(1, "Exit\n", 5);
+		ft_printf(g_core.title.full_title);
+		print_error("^+D : Exits ./minishell\n", 0, 0);
 		free_core();
 		exit(EXIT_SUCCESS);
 	}
