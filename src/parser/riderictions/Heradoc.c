@@ -100,7 +100,7 @@ char	*get_heredoc_values(char *eof)
 	is_begin = 0;
 	while (1)
 	{
-		newline = readline("> ");
+		newline = env_check(readline("> "));
 		if (str_compare(eof, newline))
 		{
 			free(newline);

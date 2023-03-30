@@ -41,6 +41,8 @@ int			read_heredoc(t_cmdlist *node, char *eof);
 void		set_heredoc_value(t_cmdlist *node, int *fd);
 void		fill_heredoc(char *eof, int *fd);
 char		*get_heredoc_values(char *eof);
+char		*replace_line(char *old, char *replace, int begin, int start);
+char		*env_check(char *line);
 
 void		close_heredoc_file(void);
 void		open_heredoc_file(char	*create_mode);

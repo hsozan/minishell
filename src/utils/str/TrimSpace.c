@@ -16,6 +16,7 @@
 	Gelen komutu bosluk gordukce adres uzerinde arttirir
 	boylece geldigi fonksiyonda da artmis olur.
 */
+
 size_t	trim_spaces(char **cmd_line)
 {
 	size_t	count;
