@@ -19,7 +19,7 @@ TEAL = \033[0;36m
 all: $(NAME)
 
 $(NAME):
-#	@make norm
+	@make norm
 	@echo "$(GREEN)Compiling...$(DEFAULT)"
 	@gcc $(CFLAGS) $(SRC) $(READLINE) $(INCLUDE) -o $(NAME)
 	@echo "$(GREEN)Compiled.$(DEFAULT)"

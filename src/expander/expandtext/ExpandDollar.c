@@ -60,6 +60,11 @@ void	expand_dollar_value(char **dst, char **src)
 
 	count = 0;
 	ptr = (*src) + 1;
+	if (*ptr == '{')
+	{
+		brace_check(dst, src);
+		return ;
+	}
 	while (*ptr != ' ' && *(ptr) && *ptr != *DOUBLE_QUOTE
 		&& *ptr != *SINGLE_QUOTE && *ptr != '$')
 	{

@@ -11,7 +11,9 @@
 /* ************************************************************************** */
 
 #include "../../../include/minishell.h"
-
+/*
+normdan kaçmak için(void)new yazıldı.
+*/
 void	set_n(char *new)
 {
 	(void)new;

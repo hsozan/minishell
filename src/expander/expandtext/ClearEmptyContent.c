@@ -38,3 +38,22 @@ void	clear_void_contents(void)
 			lex_list = lex_list->next;
 	}
 }
+
+void	brace_check(char **dst, char **src)
+{
+	char	*ptr;
+	int		count;
+
+	ptr = *src + 1;
+	count = 0;
+	while (*ptr != '}' && *ptr)
+	{
+		count++;
+		ptr++;
+	}
+	ptr = ft_strpcpy(NULL, (*src) + 2, count - 1);
+	expand_envs(dst, ptr);
+	free(ptr);
+	*src += count + 2;
+	return ;
+}

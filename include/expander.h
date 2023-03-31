@@ -33,6 +33,7 @@ void	question_mark(char **dst, char **src);
 void	expand_dollar_value(char **dst, char **src);
 
 void	clear_void_contents(void);
+void	brace_check(char **dst, char **src);
 
 //EXANDCMD
 void	expand_cmd(char **dst);
