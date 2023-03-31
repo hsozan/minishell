@@ -16,11 +16,11 @@ void	print_files(t_filelist *temp_filelist)
 {
 	while (temp_filelist)
 	{
-		printf("{fd: %d, ridrect : %s, filename : %s} ", temp_filelist->fd,
+		ft_printf("{fd: %d, ridrect : %s, filename : %s} ", temp_filelist->fd,
 			temp_filelist->metachar, temp_filelist->filename);
 		temp_filelist = temp_filelist->next;
 	}
-	printf("\n\n");
+	ft_printf("\n\n");
 }
 
 void	print_parser(void)
@@ -34,17 +34,17 @@ void	print_parser(void)
 	while (temp_cmdlist)
 	{
 		index = 0;
-		printf("------------NODE %d------------\n", node_count++);
-		printf("PATH: ");
+		ft_printf("------------NODE %d------------\n", node_count++);
+		ft_printf("PATH: ");
 		while (temp_cmdlist->path && temp_cmdlist->path[index])
 			printf("%s; ", (temp_cmdlist->path[index++]));
-		printf("\nCMD: %s\n", temp_cmdlist->cmd);
-		printf("infile: %d\n", temp_cmdlist->infile);
-		printf("outfile: %d\n", temp_cmdlist->outfile);
+		ft_printf("\nCMD: %s\n", temp_cmdlist->cmd);
+		ft_printf("infile: %d\n", temp_cmdlist->infile);
+		ft_printf("outfile: %d\n", temp_cmdlist->outfile);
 		if (temp_cmdlist->heredoc_values)
-			printf("heredoc values: %s\n", temp_cmdlist->heredoc_values);
-		printf("pid: %d\n", temp_cmdlist->pid);
-		printf("~files~\n");
+			ft_printf("heredoc values: %s\n", temp_cmdlist->heredoc_values);
+		ft_printf("pid: %d\n", temp_cmdlist->pid);
+		ft_printf("~files~\n");
 		print_files(temp_cmdlist->files);
 		temp_cmdlist = temp_cmdlist->next;
 	}
