@@ -35,3 +35,4 @@ int	main(int argc, char **argv, char **env)
 	free_core();
 }
 //https://42born2code.slack.com/archives/CMYBUFF7D/p1635677354410700
+//https://github.com/tmatis/ft_mallocator
