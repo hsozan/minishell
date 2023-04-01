@@ -1,13 +1,13 @@
 NAME = minishell
 
 #NORMALİ
-#CFLAGS	:= -Wall -Werror -Wextra -I $(INCLUDE) /goinfre/homebrew/opt/readline/include
-#READLINE = -lreadline -L /goinfre/homebrew/opt/readline/lib
+CFLAGS	:= -Wall -Werror -Wextra -I $(INCLUDE) /goinfre/homebrew/opt/readline/include
+READLINE = -lreadline -L /goinfre/homebrew/opt/readline/lib
 #LCFLAGS	:= -Wall -Werror -Wextra -I $(INCLUDE) /usr/include/readline
 #SEFA
-CFLAGS	:= -Wall -Werror -Wextra -I $(INCLUDE) /Users/sefatunca/homebrew/opt/readline/include
+#CFLAGS	:= -Wall -Werror -Wextra -I $(INCLUDE) /Users/sefatunca/homebrew/opt/readline/include
 
-READLINE = -lreadline -L /Users/sefatunca/homebrew/opt/readline/lib
+#READLINE = -lreadline -L /Users/sefatunca/homebrew/opt/readline/lib
 #LREADLINE = -L/usr/include -lreadline 
 INCLUDE = -I ./include
 SRC = $(shell find src -name "*.c")
@@ -19,7 +19,7 @@ TEAL = \033[0;36m
 all: $(NAME)
 
 $(NAME):
-	@make norm
+#	@make norm
 	@echo "$(GREEN)Compiling...$(DEFAULT)"
 	@gcc $(CFLAGS) $(SRC) $(READLINE) $(INCLUDE) -o $(NAME)
 	@echo "$(GREEN)Compiled.$(DEFAULT)"

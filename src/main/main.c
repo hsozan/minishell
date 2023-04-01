@@ -6,7 +6,7 @@
 /*   By: hsozan <hsozan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 13:39:23 by hsozan            #+#    #+#             */
-/*   Updated: 2023/03/29 11:55:36 by hsozan           ###   ########.fr       */
+/*   Updated: 2023/04/01 13:57:07 by hsozan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,3 @@ int	main(int argc, char **argv, char **env)
 	}
 	free_core();
 }
-//https://42born2code.slack.com/archives/CMYBUFF7D/p1635677354410700
-//https://github.com/tmatis/ft_mallocator
